@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Install global packages
+if [[ "$OS" == *Windows* ]] ;
+then os="windows"
+else os="other"
+fi
+
+if [ "$os" == windows ]
+then
+    echo "Windows is not supported at this time"
+    exit
+fi
+
+# install grunt
+sudo npm install -g grunt
+
+# install other npm dependencies
+npm install
+
+exit 0

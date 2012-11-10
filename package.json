@@ -1,0 +1,17 @@
+{
+    "name": "cdelcol-env-setup",
+        "version": "0.0.1",
+        "description": "This package is to setup my own environment from scratch",
+        "repository": "",
+        "author": {
+            "name": "Chris DelCol",
+            "url": "https://github.com/cdelcol"
+        },
+        "licenses": [{
+            "type": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }],
+        "dependencies": {
+            "path-extra": ""
+        }
+}

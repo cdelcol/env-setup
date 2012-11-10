@@ -1,0 +1,5 @@
+[user]
+	name = cdelcol
+	email = cdelcol@rim.com
+[credential]
+	helper = osxkeychain

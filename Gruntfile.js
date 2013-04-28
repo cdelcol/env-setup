@@ -6,11 +6,10 @@ module.exports = function(grunt) {
         setup: {
             bash: [
                 //{ from:'from', to: 'to', type: 'dir'}
+                { from:'.bash_profile', type: 'file'}
             ],
             git: [
                 { from:'.gitignore_global', type: 'file'},
-                { from:'.git-completion.bash', type: 'file'}
-
             ],
             vim:[
                 { from:'.vim', type: 'dir' },

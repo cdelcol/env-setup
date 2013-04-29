@@ -13,13 +13,14 @@ alias gr='git reset'
 alias la='ls -la'
 #**************************showing git branches in bash prompt***********************************
 function is_git_dirty {
-[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+[[ $(git status -z | grep -v '^\?') != "" ]] && echo "*"
 }
 
 function parse_git_branch {
-if [ ${PWD##*/} != "webkit" ]; then
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(is_git_dirty)]/"
-fi
+ # This line makes sure there is a git directory
+ if [ -d ".git" ] || git rev-parse --git-dir > /dev/null 2>&1 ; then
+     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(is_git_dirty)]/"
+ fi
 }
 #*************************Git Completion*********************************************************
 function proml {

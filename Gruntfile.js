@@ -10,6 +10,7 @@ module.exports = function(grunt) {
             ],
             git: [
                 { from:'.gitignore_global', type: 'file'},
+                { from:'.gitconfig', type: 'file'},
             ],
             vim:[
                 { from:'.vim', type: 'dir' },
